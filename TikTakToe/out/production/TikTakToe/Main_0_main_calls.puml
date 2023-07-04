@@ -1,0 +1,430 @@
+@startuml
+
+/' diagram meta data start
+config=CallConfiguration;
+{
+  "rootMethod": "Main#main(String[])",
+  "projectClassification": {
+    "searchMode": "OpenProject", // OpenProject, AllProjects
+    "includedProjects": "",
+    "pathEndKeywords": "*.impl",
+    "isClientPath": "",
+    "isClientName": "",
+    "isTestPath": "",
+    "isTestName": "",
+    "isMappingPath": "",
+    "isMappingName": "",
+    "isDataAccessPath": "",
+    "isDataAccessName": "",
+    "isDataStructurePath": "",
+    "isDataStructureName": "",
+    "isInterfaceStructuresPath": "",
+    "isInterfaceStructuresName": "",
+    "isEntryPointPath": "",
+    "isEntryPointName": "",
+    "treatFinalFieldsAsMandatory": false
+  },
+  "graphRestriction": {
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "removeByInheritance": "", // inheritance/annotation based filtering is done in a second step
+    "removeByAnnotation": "",
+    "removeByClassPackage": "", // cleanup the graph after inheritance/annotation based filtering is done
+    "removeByClassName": "",
+    "cutMappings": false,
+    "cutEnum": true,
+    "cutTests": true,
+    "cutClient": true,
+    "cutDataAccess": true,
+    "cutInterfaceStructures": true,
+    "cutDataStructures": true,
+    "cutGetterAndSetter": true,
+    "cutConstructors": true
+  },
+  "graphTraversal": {
+    "forwardDepth": 3,
+    "backwardDepth": 3,
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "hideMappings": false,
+    "hideDataStructures": false,
+    "hidePrivateMethods": true,
+    "hideInterfaceCalls": true, // indirection: implementation -> interface (is hidden) -> implementation
+    "onlyShowApplicationEntryPoints": false, // root node is included
+    "useMethodCallsForStructureDiagram": "ForwardOnly" // ForwardOnly, BothDirections, No
+  },
+  "details": {
+    "aggregation": "GroupByClass", // ByClass, GroupByClass, None
+    "showMethodParametersTypes": false,
+    "showMethodParametersNames": false,
+    "showMethodReturnType": false,
+    "showPackageLevels": 2,
+    "showCallOrder": false,
+    "edgeMode": "MethodsOnly", // TypesOnly, MethodsOnly, TypesAndMethods, MethodsAndDirectTypeUsage
+    "showDetailedClassStructure": false
+  },
+  "rootClass": "Main",
+  "extensionCallbackMethod": "" // qualified.class.name#methodName - signature: public static String method(String)
+}
+diagram meta data end '/
+
+
+
+digraph g {
+    rankdir="LR"
+    splines=polyline
+    
+
+'nodes 
+subgraph cluster_1984932214 { 
+   	label=Models
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   subgraph cluster_1274498462 { 
+   	label=Board
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   Board1984932214XXXprintBoard0[
+	label="+ printBoard()"
+	style=filled
+	fillcolor=white
+	tooltip="Board
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_1287902986 { 
+   	label=Game
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   Game1984932214XXXmakeMove0[
+	label="+ makeMove()"
+	style=filled
+	fillcolor=white
+	tooltip="Game
+
+null"
+	fontcolor=darkgreen
+];
+
+Game1984932214XXXprintBoard0[
+	label="+ printBoard()"
+	style=filled
+	fillcolor=white
+	tooltip="Game
+
+null"
+	fontcolor=darkgreen
+];
+
+Game1984932214XXXundo0[
+	label="+ undo()"
+	style=filled
+	fillcolor=white
+	tooltip="Game
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_456702235 { 
+   	label=Player
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   Player1984932214XXXmakeMove64356038[
+	label="+ makeMove()"
+	style=filled
+	fillcolor=white
+	tooltip="Player
+
+null"
+	fontcolor=darkgreen
+];
+} 
+} 
+
+subgraph cluster_2211858 { 
+   	label=Game
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   subgraph cluster_37131645 { 
+   	label=Builder
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   Builder1287902986XXXbuild0[
+	label="+ build()"
+	style=filled
+	fillcolor=white
+	tooltip="Builder
+
+null"
+	fontcolor=darkgreen
+];
+
+Builder1287902986XXXsetDimensions104431[
+	label="+ setDimensions()"
+	style=filled
+	fillcolor=white
+	tooltip="Builder
+
+null"
+	fontcolor=darkgreen
+];
+
+Builder1287902986XXXsetPlayers450993057[
+	label="+ setPlayers()"
+	style=filled
+	fillcolor=white
+	tooltip="Builder
+
+null"
+	fontcolor=darkgreen
+];
+
+Builder1287902986XXXsetWinningStrategies202526247[
+	label="+ setWinningStrategies()"
+	style=filled
+	fillcolor=white
+	tooltip="Builder
+
+null"
+	fontcolor=darkgreen
+];
+} 
+} 
+
+subgraph cluster_2390489 { 
+   	label=Main
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   subgraph cluster_1706522830 { 
+   	label=Main
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   Main2390489XXXmain1859653459[
+	label="+ main()"
+	style=filled
+	fillcolor=white
+	tooltip="Main
+
+null"
+	penwidth=4
+	fontcolor=darkgreen
+];
+} 
+} 
+
+subgraph cluster_46680009 { 
+   	label=Controllers
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   subgraph cluster_654023653 { 
+   	label=GameController
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   GameController46680009XXXcheckState2211858[
+	label="+ checkState()"
+	style=filled
+	fillcolor=white
+	tooltip="GameController
+
+null"
+	fontcolor=darkgreen
+];
+
+GameController46680009XXXgetWinner2211858[
+	label="+ getWinner()"
+	style=filled
+	fillcolor=white
+	tooltip="GameController
+
+null"
+	fontcolor=darkgreen
+];
+
+GameController46680009XXXmakeMove2211858[
+	label="+ makeMove()"
+	style=filled
+	fillcolor=white
+	tooltip="GameController
+
+null"
+	fontcolor=darkgreen
+];
+
+GameController46680009XXXprintBoard2211858[
+	label="+ printBoard()"
+	style=filled
+	fillcolor=white
+	tooltip="GameController
+
+null"
+	fontcolor=darkgreen
+];
+
+GameController46680009XXXstartGame91167453[
+	label="+ startGame()"
+	style=filled
+	fillcolor=white
+	tooltip="GameController
+
+null"
+	fontcolor=darkgreen
+];
+
+GameController46680009XXXundo2211858[
+	label="+ undo()"
+	style=filled
+	fillcolor=white
+	tooltip="GameController
+
+null"
+	fontcolor=darkgreen
+];
+} 
+} 
+
+subgraph cluster_863724033 { 
+   	label=winningStrategies
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   subgraph cluster_2142348828 { 
+   	label=DiagonalWinningStrategy
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   DiagonalWinningStrategy41658564XXXcheckWinner1242681941[
+	label="+ checkWinner()"
+	style=filled
+	fillcolor=white
+	tooltip="DiagonalWinningStrategy
+
+null"
+	fontcolor=darkgreen
+];
+
+DiagonalWinningStrategy41658564XXXhandleUndo1242681941[
+	label="+ handleUndo()"
+	style=filled
+	fillcolor=white
+	tooltip="DiagonalWinningStrategy
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_340698611 { 
+   	label=ColWinningStrategy
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   ColWinningStrategy41658564XXXcheckWinner1242681941[
+	label="+ checkWinner()"
+	style=filled
+	fillcolor=white
+	tooltip="ColWinningStrategy
+
+null"
+	fontcolor=darkgreen
+];
+
+ColWinningStrategy41658564XXXhandleUndo1242681941[
+	label="+ handleUndo()"
+	style=filled
+	fillcolor=white
+	tooltip="ColWinningStrategy
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_562176627 { 
+   	label=RowWinningStrategy
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   RowWinningStrategy41658564XXXcheckWinner1242681941[
+	label="+ checkWinner()"
+	style=filled
+	fillcolor=white
+	tooltip="RowWinningStrategy
+
+null"
+	fontcolor=darkgreen
+];
+
+RowWinningStrategy41658564XXXhandleUndo1242681941[
+	label="+ handleUndo()"
+	style=filled
+	fillcolor=white
+	tooltip="RowWinningStrategy
+
+null"
+	fontcolor=darkgreen
+];
+} 
+} 
+
+'edges    
+Game1984932214XXXmakeMove0 -> ColWinningStrategy41658564XXXcheckWinner1242681941;
+Game1984932214XXXmakeMove0 -> DiagonalWinningStrategy41658564XXXcheckWinner1242681941;
+Game1984932214XXXmakeMove0 -> Player1984932214XXXmakeMove64356038;
+Game1984932214XXXmakeMove0 -> RowWinningStrategy41658564XXXcheckWinner1242681941;
+Game1984932214XXXprintBoard0 -> Board1984932214XXXprintBoard0;
+Game1984932214XXXundo0 -> ColWinningStrategy41658564XXXhandleUndo1242681941;
+Game1984932214XXXundo0 -> DiagonalWinningStrategy41658564XXXhandleUndo1242681941;
+Game1984932214XXXundo0 -> RowWinningStrategy41658564XXXhandleUndo1242681941;
+GameController46680009XXXmakeMove2211858 -> Game1984932214XXXmakeMove0;
+GameController46680009XXXprintBoard2211858 -> Game1984932214XXXprintBoard0;
+GameController46680009XXXstartGame91167453 -> Builder1287902986XXXbuild0;
+GameController46680009XXXstartGame91167453 -> Builder1287902986XXXsetDimensions104431;
+GameController46680009XXXstartGame91167453 -> Builder1287902986XXXsetPlayers450993057;
+GameController46680009XXXstartGame91167453 -> Builder1287902986XXXsetWinningStrategies202526247;
+GameController46680009XXXundo2211858 -> Game1984932214XXXundo0;
+Main2390489XXXmain1859653459 -> GameController46680009XXXcheckState2211858;
+Main2390489XXXmain1859653459 -> GameController46680009XXXgetWinner2211858;
+Main2390489XXXmain1859653459 -> GameController46680009XXXmakeMove2211858;
+Main2390489XXXmain1859653459 -> GameController46680009XXXprintBoard2211858;
+Main2390489XXXmain1859653459 -> GameController46680009XXXstartGame91167453;
+Main2390489XXXmain1859653459 -> GameController46680009XXXundo2211858;
+    
+}
+@enduml
